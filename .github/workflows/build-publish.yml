@@ -64,7 +64,7 @@ jobs:
           npm install --global yarn
       - name: Set JFrog base branch if master
         if: github.event_name == 'schedule' || github.event_name == 'push'
-        run: echo "JF_GIT_BASE_BRANCH=master" >> $GITHUB_ENV
+        run: echo "JF_GIT_BASE_BRANCH=main" >> $GITHUB_ENV
       
       - name: Get id token
         run: |
