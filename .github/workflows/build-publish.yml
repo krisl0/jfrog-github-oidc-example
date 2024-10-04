@@ -94,6 +94,6 @@ jobs:
           JF_URL: https://jonw123test.jfrog.io
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          oidc-provider-name: jfrog-github
+          oidc-provider-name: github
           oidc-audience: jfrog-github
            
