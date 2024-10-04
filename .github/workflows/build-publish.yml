@@ -89,7 +89,13 @@ jobs:
           # JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Configure JFrog Artifactory
         run: |
-           jf rt dl generic-nonprod/testupload.zip
+      - uses: jfrog/frogbot@v2
+        env:
+          JF_URL: https://jonw123test.jfrog.io
+          JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          oidc-provider-name: frogbot-integration
+           
 
      # - name: Configure JFrog Artifactory
      #   run: |
