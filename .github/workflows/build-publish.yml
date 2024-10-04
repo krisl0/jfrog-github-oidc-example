@@ -1,25 +1,13 @@
-name: JFrog scan
-
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-  schedule:
-    - cron: "0 0 * * *"
-
+name: "JFrog-GitHub wildcard test"
+on: push
+permissions:
+  id-token: write
 jobs:
-  scan:
-    runs-on: bmll-always-on-small
-
-    permissions:
-      id-token: write
-      pull-requests: write
-      security-events: write
-      contents: read
-
+  build:
+    runs-on: ubuntu-latest
+    env:
+      OIDC_AUDIENCE: 'jfrog-github'
+      OIDC_PROVIDER: 'github'
     steps:
       - uses: actions/checkout@v4
         with:
