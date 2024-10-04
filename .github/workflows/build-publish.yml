@@ -96,24 +96,3 @@ jobs:
         with:
           oidc-provider-name: frogbot-integration
            
-
-     # - name: Configure JFrog Artifactory
-     #   run: |
-   #       jf rt ping
-   #       jf c add --user ${{ steps.jfrog-cli.outputs.oidc-user }} --access-token ${{ steps.jfrog-cli.outputs.oidc-token }} --url "https://bmlltech.jfrog.io" jfrogserver
-      #    jf c show jfrogserver
-     #     jf rt ping --server-id="jfrogserver"
-      # https://docs.jfrog-applications.jfrog.io/jfrog-applications/frogbot/setup-frogbot/setup-frogbot-using-github-actions/scan-pull-request-full-template
-     # - uses: jfrog/frogbot@v2
-
-
-        # #env:
-        #  #JF_URL: "https://bmlltech.jfrog.io"
-        #   #JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #   JFROG_CLI_LOG_LEVEL: DEBUG
-        #   JF_MIN_SEVERITY: High
-        #   JF_USER: github-actions
-        #   JF_ACCESS_TOKEN: ${{ steps.get-artifactory-id-token.outputs.JFROG_ACCESS_TOKEN }}
-        #   PIP_INDEX_URL: "https://bmlltech.jfrog.io/artifactory/api/pypi/pypi-remote/simple"
-        #   PIP_EXTRA_INDEX_URL: "https://bmlltech.jfrog.io/artifactory/api/pypi/pypi-local/simple"
-        #   PIP_TRUSTED_HOST: "bmlltech.jfrog.io"
